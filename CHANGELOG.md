@@ -8,6 +8,7 @@
 
 ### Other
 
+- Datei entfernt da unbrauchbar [`7da0bf53`](https://github.com/puppyspike/spikes-plugin/commit/7da0bf530370e2adafafdb9902b28ff62c23554f)
 - Update main.yml [`44ac5fad`](https://github.com/puppyspike/spikes-plugin/commit/44ac5fad729dbf3b105b6c077d1f0072bc88ed43)
 - build [`5cfb7179`](https://github.com/puppyspike/spikes-plugin/commit/5cfb7179b8a4765ce4fb2d6b4e5b45a7f852ab79)
 Neue Datei
