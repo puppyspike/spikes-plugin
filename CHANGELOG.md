@@ -2,6 +2,10 @@
 
 ## unreleased
 
+### Bug Fixes
+
+- Neuer Text [`1fb2f724`](https://github.com/puppyspike/spikes-plugin/commit/1fb2f724c8d1b69e694f601b6b4850f226252c3a)
+
 ### Other
 
 - Update main.yml [`44ac5fad`](https://github.com/puppyspike/spikes-plugin/commit/44ac5fad729dbf3b105b6c077d1f0072bc88ed43)
