@@ -12,7 +12,7 @@
  * Plugin Name:       Spikes Plugin
  * Plugin URI:        https://felixlimburger.de
  * Description:       Das ist ein Plugin für meine Slider und etwas mehr. Mal schauen was passiert.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Felix Limburger
  * Author URI:        https://felixlimburger.de
  * License:           GPL-2.0+
@@ -37,7 +37,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 $myUpdateChecker->setBranch('main');
 
 
-define('SPIKE_VERSION', '1.0.1');
+define('SPIKE_VERSION', '1.0.2');
 define('SPIKE_SUFFIX', SCRIPT_DEBUG ? '' : '.min');
 
 if ( ! function_exists( 'is_plugin_active' ) ) {
