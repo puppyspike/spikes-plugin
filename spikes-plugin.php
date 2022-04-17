@@ -36,59 +36,45 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
 
-//require 'plugin-update-checker/plugin-update-checker.php';
-//$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-//    'https://dev.felixlimburger.de/updater/plugin.json',
-//    __FILE__, //Full path to the main plugin file or functions.php.
-//    'spikes-plugin'
-//);
-/**
- * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
- */
-//define( 'SPIKES_PLUGIN_VERSION', '1.0.0' );
 
-/**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-spikes-plugin-activator.php
- */
-function activate_spikes_plugin() {
-    require_once plugin_dir_path( __FILE__ ) . 'includes/class-spikes-plugin-activator.php';
-    Spikes_Plugin_Activator::activate();
+define('SPIKE_VERSION', '1.5.1');
+define('SPIKE_SUFFIX', SCRIPT_DEBUG ? '' : '.min');
+
+if ( ! function_exists( 'is_plugin_active' ) ) {
+    require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 }
 
-/**
- * The code that runs during plugin deactivation.
- * This action is documented in includes/class-spikes-plugin-deactivator.php
- */
-function deactivate_spikes_plugin() {
-    require_once plugin_dir_path( __FILE__ ) . 'includes/class-spikes-plugin-deactivator.php';
-    Spikes_Plugin_Deactivator::deactivate();
+add_action( 'init', 'spike_includes' );
+function spike_includes() {
+
+    if ( !is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+        add_action( 'admin_notices', 'spike_woocommerce_warning' );
+    } else if( ! (is_plugin_active( 'gutenberg/gutenberg.php' ) || spike_wp_version('>=', '5.0')) ) {
+        add_action( 'admin_notices', 'spike_gutenberg_warning' );
+    } else {
+        include_once dirname( __FILE__ ) . '/includes/guten-blocks/index.php';
+    }
 }
 
-register_activation_hook( __FILE__, 'activate_spikes_plugin' );
-register_deactivation_hook( __FILE__, 'deactivate_spikes_plugin' );
-
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path( __FILE__ ) . 'includes/class-spikes-plugin.php';
-
-/**
- * Begins execution of the plugin.
- *
- * Since everything within the plugin is registered via hooks,
- * then kicking off the plugin from this point in the file does
- * not affect the page life cycle.
- *
- * @since    1.0.0
- */
-function run_spikes_plugin() {
-
-    $plugin = new Spikes_Plugin();
-    $plugin->run();
-
+function spike_woocommerce_warning() {
+    ?>
+    <div class="message error woocommerce-admin-notice woocommerce-st-inactive woocommerce-not-configured">
+        <p><?php esc_html_e("Product Blocks for WooCommerce is enabled but not effective. It requires WooCommerce in order to work.", "spike"); ?>.</p>
+    </div>
+    <?php
 }
-run_spikes_plugin();
+
+function spike_gutenberg_warning() {
+    ?>
+
+    <div class="message error woocommerce-admin-notice woocommerce-st-inactive woocommerce-not-configured">
+        <p><?php esc_html_e("Product Blocks for WooCommerce plugin couldn't find the Block Editor (Gutenberg) on this site. It requires WordPress 5+ or Gutenberg installed as a plugin.", "spike"); ?></p>
+    </div>
+
+    <?php
+}
+
+function spike_wp_version( $operator = '>', $version = '4.0' ) {
+    global $wp_version;
+    return version_compare( $wp_version, $version, $operator );
+}
