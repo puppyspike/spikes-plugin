@@ -2,6 +2,8 @@
 
 ## unreleased
 
+## 1.0.1 - 2022-04-17
+
 ### Bug Fixes
 
 - Neuer Text [`1fb2f724`](https://github.com/puppyspike/spikes-plugin/commit/1fb2f724c8d1b69e694f601b6b4850f226252c3a)
