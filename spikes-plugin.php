@@ -37,7 +37,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 $myUpdateChecker->setBranch('main');
 
 
-define('SPIKE_VERSION', '1.5.1');
+define('SPIKE_VERSION', '1.0.1');
 define('SPIKE_SUFFIX', SCRIPT_DEBUG ? '' : '.min');
 
 if ( ! function_exists( 'is_plugin_active' ) ) {
