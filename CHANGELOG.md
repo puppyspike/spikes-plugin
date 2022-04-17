@@ -1,13 +1,15 @@
-# Mein Changelog
+# Changelog
 
 ## unreleased
 
 ### Bug Fixes
 
+- Namensänderung Changelog [`00353919`](https://github.com/puppyspike/spikes-plugin/commit/0035391939329dcf3ac9661eb37fa4e1859fb879)
 - Falsche Versionsnummer [`51a645d1`](https://github.com/puppyspike/spikes-plugin/commit/51a645d1b6d46070ab92b8ce07fc20e1102c216f)
 
 ### Other
 
+- Merge branch 'main' of https://github.com/puppyspike/spikes-plugin [`95100b2c`](https://github.com/puppyspike/spikes-plugin/commit/95100b2c8bec53c8cdc55951105ad0128bf63736)
 - Update CHANGELOG.md [`0d4e5e28`](https://github.com/puppyspike/spikes-plugin/commit/0d4e5e2805c48c8caf133b53833a3a0ed288284c)
 
 ## 1.0.1 - 2022-04-17
