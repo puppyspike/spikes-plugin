@@ -12,7 +12,7 @@
  * Plugin Name:       Spikes Plugin
  * Plugin URI:        https://felixlimburger.de
  * Description:       Das ist ein Plugin für meine Slider und etwas mehr. Mal schauen was passiert.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Felix Limburger
  * Author URI:        https://felixlimburger.de
  * License:           GPL-2.0+
