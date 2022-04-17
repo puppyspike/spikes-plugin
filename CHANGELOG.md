@@ -9,6 +9,8 @@
 
 ### Other
 
+- Merge branch 'main' of https://github.com/puppyspike/spikes-plugin [`e0a44cf2`](https://github.com/puppyspike/spikes-plugin/commit/e0a44cf2b54e7d0707705703422f0a52de9440e9)
+- Create .gitignore [`5607bcce`](https://github.com/puppyspike/spikes-plugin/commit/5607bcce2cd98a62e4a2c5f2191b7c516b82acf0)
 - Merge branch 'main' of https://github.com/puppyspike/spikes-plugin [`17c05017`](https://github.com/puppyspike/spikes-plugin/commit/17c05017a3c064a11ef46ebd8e969543c053f120)
 - Merge branch 'main' of https://github.com/puppyspike/spikes-plugin [`95100b2c`](https://github.com/puppyspike/spikes-plugin/commit/95100b2c8bec53c8cdc55951105ad0128bf63736)
 - Update CHANGELOG.md [`0d4e5e28`](https://github.com/puppyspike/spikes-plugin/commit/0d4e5e2805c48c8caf133b53833a3a0ed288284c)
