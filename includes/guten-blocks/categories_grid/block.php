@@ -10,7 +10,7 @@ require_once dirname( __FILE__ ) . '/functions/function-setup.php';
 /**
  * Frontend Output
  */
-function pbfw_render_frontend_categories_grid( $attributes ) {
+function spike_render_frontend_categories_grid( $attributes ) {
 
 	extract(
 		shortcode_atts(

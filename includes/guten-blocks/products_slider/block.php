@@ -10,7 +10,7 @@ require_once dirname( __FILE__ ) . '/functions/function-setup.php';
 /**
  * Frontend Output
  */
-function pbfw_render_frontend_products_slider( $attributes ) {
+function spike_render_frontend_products_slider( $attributes ) {
 	extract(
 		shortcode_atts(
 			array(

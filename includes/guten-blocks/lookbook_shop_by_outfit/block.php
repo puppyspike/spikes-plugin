@@ -10,7 +10,7 @@ include_once dirname( __FILE__ ) . '/functions/function-setup.php';
 /**
  * Frontend Output
  */
-function pbfw_render_frontend_lookbook_snap_to_scroll_product( $attributes ) {
+function spike_render_frontend_lookbook_snap_to_scroll_product( $attributes ) {
 
 	extract( shortcode_atts( array(
 		'productIDs'					=> '',
