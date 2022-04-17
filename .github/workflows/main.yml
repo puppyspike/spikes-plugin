@@ -16,7 +16,7 @@ jobs:
       - name: Update Changelog
         uses: AlexxNB/chalogen@v0.1.4
         with:
-          title: Mein Changelog 
+          title: Changelog 
       - name: Commit Changelog to repository
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
