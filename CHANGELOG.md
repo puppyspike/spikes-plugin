@@ -2,6 +2,10 @@
 
 ## unreleased
 
+### Bug Fixes
+
+- Falsche Versionsnummer [`51a645d1`](https://github.com/puppyspike/spikes-plugin/commit/51a645d1b6d46070ab92b8ce07fc20e1102c216f)
+
 ## 1.0.1 - 2022-04-17
 
 ### Bug Fixes
